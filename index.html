@@ -2,78 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Day</title>
+    <title>Happy Birthday Vyshnavi</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+        color: #980000;
+        text-align: center;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-top: 30px;
+        color: #980000;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #333;
+      }
+
+      .card {
+        background-color: #fde7e7;
+        border: 2px solid #980000;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      button {
+        background-color: #980000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #c71515;
+      }
+
+      #surprise {
+        margin-top: 20px;
+      }
+
+      #surprise img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <img src="./images/logo.png" alt="coffee logo" id="logo"/>
-    <h1>Coffee Day</h1>
-    <!-- navbar -->
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="numbers.html">Numbers</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <!-- hero image -->
-    <img src="./images/background.jpeg" alt="coffee beans" width="100%" />
-    <br />
-    <h2>Featured Products</h2>
-    <br />
-    <!-- house blend -->
-    <h3>House Blend Coffee</h3>
-    <img src="./images/house-blend.jpeg" alt="house blend" />
-    <p style="width: 50%">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      obcaecati libero molestias ullam mollitia, optio ipsa ipsam numquam
-      aspernatur beatae consequuntur temporibus eum voluptas, unde totam
-      repudiandae qui. Illum eveniet eaque, hic impedit esse laboriosam optio
-      tempore quam voluptates suscipit exercitationem sapiente nulla
-      necessitatibus pariatur voluptatibus perspiciatis. Eaque, sint provident!
-    </p>
-    <h4>
-      <a href="https://wwwwikipedia.org/wiki/coffee" target="_blank">Details</a>
-    </h4>
-    <!-- end of house blend -->
-    <!-- french roast -->
-    <h3>French Roast Coffee</h3>
-    <img src="./images/french-roast.jpeg" alt="french roast" />
-    <p style="width: 50%">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      obcaecati libero molestias ullam mollitia, optio ipsa ipsam numquam
-      aspernatur beatae consequuntur temporibus eum voluptas, unde totam
-      repudiandae qui. Illum eveniet eaque, hic impedit esse laboriosam optio
-      tempore quam voluptates suscipit exercitationem sapiente nulla
-      necessitatibus pariatur voluptatibus perspiciatis. Eaque, sint provident!
-    </p>
-    <h4>
-      <a href="https://wwwwikipedia.org/wiki/coffee" target="_blank">Details</a>
-    </h4>
-    <!-- end of french roast -->
-    <!-- columbian roast -->
-    <h3>Columbian Roast Coffee</h3>
-    <img src="./images/columbian-roast.jpeg" alt="columbian roast" />
-    <p style="width: 50%">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      obcaecati libero molestias ullam mollitia, optio ipsa ipsam numquam
-      aspernatur beatae consequuntur temporibus eum voluptas, unde totam
-      repudiandae qui. Illum eveniet eaque, hic impedit esse laboriosam optio
-      tempore quam voluptates suscipit exercitationem sapiente nulla
-      necessitatibus pariatur voluptatibus perspiciatis. Eaque, sint provident!
-    </p>
-    <h4>
-      <a href="https://wwwwikipedia.org/wiki/coffee" target="_blank">Details</a>
-    </h4>
-    <!-- end of columbian roast -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>copyright &copy;2020</p>
-    <h3><a href="#logo">go to top</a></h3>
+    <div class="container">
+      <h1>Happy Birthday Vyshnavi! 🎉</h1>
+      <p>You make the world a better place with your kindness and love.</p>
+      <div class="card">
+        <p>
+          Wishing you a day filled with laughter, surprises, and joy. Have the
+          most wonderful birthday ever!
+        </p>
+      </div>
+      <button id="surpriseBtn">Click for a Surprise 🎁</button>
+      <div id="surprise" class="hidden">
+        <img
+          src="./images/img.jpeg"
+          alt="Happy Birthday Vyshnavi"
+        />
+        <p>Here’s to another year of being awesome! 🌟</p>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById('surpriseBtn')
+        .addEventListener('click', function () {
+          const surprise = document.getElementById('surprise');
+          surprise.classList.toggle('hidden');
+          this.textContent = surprise.classList.contains('hidden')
+            ? 'Click for a Surprise 🎁'
+            : 'Hide the Surprise 🎁';
+        });
+    </script>
   </body>
 </html>
